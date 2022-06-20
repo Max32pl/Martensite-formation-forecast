@@ -1,7 +1,7 @@
-# Martensite-formation-forecast
-Multicriteria optimization of deformation-induced martensite formation during external longitudinal turning
+# Martensite-transformation-forecast
+Multicriteria optimization of deformation-induced martensite transformation during external longitudinal turning
 
-Use of ML method Adaboost algorithm and optimization genetic algorithm. 
+Use of ML method Adaboost algorithm and genetic algorithm optimization. 
 
 The properties of metastable austenitic steels allow mechanically induced transformation of the microstructure during external longitudinal turning. 
 Under cryogenic conditions, martensite is generated from the austenite material in the peripheral zone of the workpiece. This work investigates the selective adjustment of the
