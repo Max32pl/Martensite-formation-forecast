@@ -17,8 +17,7 @@ import os
 
 def dataEinlesen():
 
-    data_df = pd.read_csv(r"C:\Users\max_x\OneDrive\Desktop\Uni\SA\Programmierung\EigeneMethode - MP\Projekt-SA"
-                          r"\Versuche_Mod_Mar.csv",sep=";")
+    data_df = pd.read_csv(r"C:\PathVersuche_Mod_Mar.csv",sep=";")
     #print(data_df)
 
     data_X = data_df[["f [mm]","T [C]","ap [mm]","vc [m/min]"]]
@@ -31,7 +30,7 @@ def dataEinlesen():
 def adaBoostRegressor(data_X, data_y):
 
     #Speicherort von Modell und Daten
-    path = r"C:\Users\max_x\OneDrive\Desktop\Uni\SA\Programmierung\EigeneMethode - MP"
+    path = r"C:\Path"
     #Liste zum Abspeichern des trainierten Modells der einzelnen Durchgänge der Kreuzvalidierung
     filename = ["2_Model_AdaBoost_vc_ap_f_T_Nr1","2_Model_AdaBoost_vc_ap_f_T_Nr2","2_Model_AdaBoost_vc_ap_f_T_Nr3"
         ,"2_Model_AdaBoost_vc_ap_f_T_Nr4","2_Model_AdaBoost_vc_ap_f_T_Nr5"]
@@ -45,9 +44,11 @@ def adaBoostRegressor(data_X, data_y):
         ,"2_traindata_X_AdaBoost_vc_ap_f_T_Nr4","2_traindata_X_AdaBoost_vc_ap_f_T_Nr5"]
     traindata_y_list = ["2_traindata_y_AdaBoost_vc_ap_f_T_Nr1","2_traindata_y_AdaBoost_vc_ap_f_T_Nr2","2_traindata_y_AdaBoost_vc_ap_f_T_Nr3"
         ,"2_traindata_y_AdaBoost_vc_ap_f_T_Nr4","2_traindata_y_AdaBoost_vc_ap_f_T_Nr5"]
-    #Variable zum Durchgänge zählen
+    
+    #Variable Durchgänge 
     i = 0
-
+    
+    Kreuzvalidierung
     rn = range(1, 72)
 
     kf5 = KFold(n_splits=5, shuffle=True)
