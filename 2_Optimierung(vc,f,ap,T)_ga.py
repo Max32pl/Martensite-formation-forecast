@@ -51,13 +51,13 @@ def f(X):
 
 if __name__ == '__main__':
 
-    #Optimierung
+    """Optimierung"""
 
-    """Speicherort von Modell und Daten"""
+    #Speicherort von Modell und Daten
     global path
-    path = r"C:\Users\max_x\OneDrive\Desktop\Uni\SA\Programmierung\EigeneMethode - MP"
+    path = r"C:\Path"
 
-    """Zielgrößen, Benutzereingaben"""
+    """Gewichtung, Zielgrößen"""
     global w1
     w1 = 0.5
     global w2
@@ -67,6 +67,7 @@ if __name__ == '__main__':
     global r_target
     r_target = 20
 
+    #genetic algorithm
     X = []
     varbound = np.array([[10, 70], [-150, -50],[20, 50],[20, 70]])
     vartype = np.array([['int'], ['int'], ['int'], ['int']])
@@ -91,9 +92,8 @@ if __name__ == '__main__':
 
     #Formatieren des Lösungsoutputs in numpy
     solution_list = model.output_dict['variable']
-    #solution_list = np.append(solution_list,[0.3,50])
     #ga variiert ganze Zahlen, 2. Stelle nach Komma wird benötigt
-    solution_list[0] = solution_list[0]/100
+    solution_list[0] = solution_list[0] / 100
     solution_list[2] = solution_list[2] / 100
     print('\nLösung: ', solution_list)
 
